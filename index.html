@@ -5,6 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet">
+    <script src="./handlebars.js"></script>
+    <script id="tea-of-month-js" type="text/x-handlebars-template">
+        {{#each teaOfMonth}}
+            {{#if this.active}}
+                <div class="tom-single-img">
+                    <img src={{this.imgUrl}} />
+                    <h4>{{this.teaName}}</h4>
+                </div>
+            {{/if}}
+        {{/each}}
+    </script>
+    <script id="loc-js" type="text/x-handlebars-template">
+        {{#each locationList}}
+            {{#if this.active}}
+                <div class="single-loc-box">
+                    <h3>{{this.locName}}</h3>
+                    <p>{{this.locLine1}}</p>
+                    <p>{{this.locLine2}}</p>
+                    <p>{{this.locLine3}}</p>
+                </div>
+            {{/if}}
+        {{/each}}
+    </script>
     <title>Tea Cozy</title>
 </head>
 <body>
@@ -31,9 +54,9 @@
                 <h2>Tea of the Month</h2>
                 <h4>What's Steeping at The Tea Cozy?</h4>
             </div>
-            <div class="tom-images">
-                <!-- Can probably do this with Handlebars.js -->
-                <div class="tom-single-img">
+            <div id="tom-images-id" class="tom-images">
+                <!-- Implemented programatically with Handlebars.js; legacy code left in for context -->
+                <!-- <div class="tom-single-img">
                     <img src="img/img-berryblitz.jpg" />
                     <h4>Fall Berry Blitz Tea</h4>
                 </div>
@@ -52,14 +75,15 @@
                 <div class="tom-single-img">
                     <img src="img/img-bedford-bizarre.jpg" />
                     <h4>Bedford Bizarre Tea</h4>
-                </div>
+                </div> -->
             </div>
         </div>
 
         <div class="locations-container separate-section">
             <h2>Locations</h2>
-            <div class="location-box-container">
-                <div class="single-loc-box">
+            <div id="location-box-container-id" class="location-box-container">
+                <!-- Implemented programatically with Handlebars.js; legacy code left in for context -->
+                <!-- <div class="single-loc-box">
                     <h3>Downtown</h3>
                     <p>384 West 4th St</p>
                     <p>Suite 108</p>
@@ -76,7 +100,7 @@
                     <p>515 Crescent Avenue</p>
                     <p>Second Floor</p>
                     <p>Portland, Maine</p>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -91,5 +115,6 @@
 
     </section>
 
+    <script src="./main.js"></script>
 </body>
 </html>
