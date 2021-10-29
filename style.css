@@ -115,11 +115,12 @@ div.header-text {
 .locations-container {
     display: flex;
     max-width: 1200px;
-    height: 500px;
+    min-height: 500px;
     background-image: url('img/img-locations-background.jpg');
     margin: 0 auto;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .locations-container h2 {
@@ -128,6 +129,10 @@ div.header-text {
 
 .location-box-container {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
 }
 
 .single-loc-box {
@@ -139,7 +144,7 @@ div.header-text {
     opacity: 1;
     width: 300px;
     height: 250px;
-    margin: 0 auto;
+    margin: 10px 10px;
 }
 
 /* Footer */
