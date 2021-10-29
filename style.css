@@ -60,6 +60,11 @@ ul.head-bar li {
     color: seashell;
 }
 
+ul.head-bar li:hover {
+    text-decoration: overline;
+    color: hotpink;
+}
+
 /* Our Mission */
 
 div.our-mission-background {
