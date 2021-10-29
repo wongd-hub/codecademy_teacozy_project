@@ -39,6 +39,11 @@ const context_tom = {
             teaName: 'Worst Tea on Earth',
             imgUrl: 'img/add-worst.jpg',
             active: true
+        },
+        {
+            teaName: 'Vanilla Tea',
+            imgUrl: 'img/add-vanilla.jpg',
+            active: true
         }
     ]
 }
